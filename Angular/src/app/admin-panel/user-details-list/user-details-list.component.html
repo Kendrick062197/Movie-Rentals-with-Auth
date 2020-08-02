@@ -1,0 +1,21 @@
+
+<table class="table table-hover">
+    <Thead>
+        <td><strong>Username</strong></td>
+        <td><strong>Email Address</strong></td>
+        <td><strong>Full Name</strong></td>
+    </Thead>
+    <tbody>
+    <tr *ngFor = "let md of service.list">
+        <td (click)="populateForm(md)">
+            {{md.userName}}
+        </td>
+        <td (click)="populateForm(md)">
+            {{md.email}}
+        </td>
+        <td (click)="populateForm(md)">
+            {{md.fullName}}
+        </td>
+    </tr>
+    </tbody>
+</table>    

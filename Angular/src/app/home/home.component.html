@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">Movie Rentals</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/adminpanel">Admin Panel</a>
+    </li>
+  </ul>
+  <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+</nav>
+
+<div class="card m-3" style="width:18rem" *ngIf="userDetails">
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Username: </strong>{{userDetails.userName}}</li>
+    <li class="list-group-item"><strong>FullName: </strong>{{userDetails.fullName}}</li>
+    <li class="list-group-item"><strong>Email: </strong>{{userDetails.email}}</li>
+  </ul>
+</div>
+<h3 style="text-align:center">Movie List</h3>
+<div class="container">
+<table class="table table-hover">
+  <Thead>
+      <td><strong>Movie Name</strong></td>
+      <td><strong>Movie Description</strong></td>
+  </Thead>
+  <tbody>
+  <tr *ngFor = "let ud of movieDetails">
+      <td>
+          {{ud.movieTitle}}
+      </td>
+      <td>
+          {{ud.movieDescription}}
+      </td>
+  </tr>
+  </tbody>
+</table>    
+</div>

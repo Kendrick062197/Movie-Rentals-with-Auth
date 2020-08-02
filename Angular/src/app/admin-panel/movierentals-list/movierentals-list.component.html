@@ -1,0 +1,32 @@
+
+<table class="table table-hover">
+    <Thead>
+        <td><strong>Movie Title</strong></td>
+        <td><strong>Description</strong></td>
+        <td><strong>Rented</strong></td>
+        <td><strong>Date Rented</strong></td>
+        <td><strong>Deleted</strong></td>
+    </Thead>
+    <tbody>
+    <tr *ngFor = "let md of service.list">
+        <td (click)="populateForm(md)">
+            {{md.movieTitle}}
+        </td>
+        <td (click)="populateForm(md)">
+            {{md.movieDescription}}
+        </td>
+        <td (click)="populateForm(md)">
+            {{md.isRented}}
+        </td>
+        <td (click)="populateForm(md)">
+            {{md.rentalDate}}
+        </td>
+        <td (click)="populateForm(md)">
+            {{md.isDeleted}}
+        </td>
+        <td>
+            <i class="fas fa-trash-alt fa-lg text-danger" (click)="onDelete(md.movieID)"></i>
+        </td>
+    </tr>
+    </tbody>
+</table>    

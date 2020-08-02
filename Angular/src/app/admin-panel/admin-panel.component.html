@@ -1,0 +1,49 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand text-white">Administrator</a>
+  <button class="btn btn-success my-2 my-sm-0" routerLink="/home">Home</button>
+</nav>
+
+<br>
+<form>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-20">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active"><a data-toggle="tab" href="#FirstTab">Movie Details</a>
+          <li><a data-toggle="tab" href="#SecondTab">User Details</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="FirstTab" class="tab-pane">
+            <div class="jumbotron">
+              <h1 class="display-4 text-center">Movie Detail List</h1>
+              <hr>
+              <div class="row">
+                <div class="col-md-4">
+                  <app-movierentals></app-movierentals>
+                </div>
+                <div class="col-md-7">
+                  <app-movierentals-list></app-movierentals-list>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="SecondTab" class="tab-pane">
+            <div class="jumbotron">
+            <h1 class="display-4 text-center">User Detail List</h1>
+            <hr>
+            <div class="row">
+              <div class="col-md-5">
+                <app-user-details></app-user-details>
+              </div>
+              <div class="col-md-7">
+                <app-user-details-list></app-user-details-list>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
